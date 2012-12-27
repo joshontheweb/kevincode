@@ -5,7 +5,7 @@ $p1El.text(name);
 console.log('kevin');
 
 var socket = io.connect();
-socket.on('news', function (data) {
+socket.on('message', function (data) {
   console.log(data);
-  socket.emit('my other event', { my: 'data' });
 });
+
