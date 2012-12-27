@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var io = require('socket.io');
 
-app.use(express.static(__dirname + '/media'));
+app.use('/media', express.static(__dirname + '/media'));
 
 app.get('/', function(req, res){
   res.sendfile('index.html');
