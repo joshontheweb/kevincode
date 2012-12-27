@@ -21,6 +21,7 @@ sio.sockets.on('connection', function (socket) {
 	console.log('a socket connected!');
     socket.on('message', function(data) {
       console.log(data);
+      sio.sockets.emit('message', data);
     });
 });
 
