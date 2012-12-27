@@ -19,4 +19,8 @@ var sio = io.listen(server);
 
 sio.sockets.on('connection', function (socket) {
 	console.log('a socket connected!');
+    socket.on('message', function(data) {
+      console.log(data);
+    });
 });
+
